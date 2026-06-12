@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Banco Digital del Sistema Braille: recurso educativo para consultar letras, números, signos y palabras básicas en Braille.">
+  <title>Banco Digital del Sistema Braille</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header class="encabezado">
+    <div class="contenedor barra-institucional">
+      <a class="boton boton-secundario" href="#" aria-label="Volver al inicio del CREBE">
+        <span aria-hidden="true">←</span>
+        Volver al inicio CREBE
+      </a>
+      <p class="identidad">CREBE “Señor de los Milagros” · Ucayali</p>
+    </div>
+
+    <div class="contenedor portada">
+      <div class="portada-texto">
+        <p class="etiqueta">Plataforma educativa accesible</p>
+        <h1>Banco Digital del Sistema Braille</h1>
+        <p class="subtitulo">Recurso educativo para la consulta, reconocimiento y práctica inicial del sistema Braille</p>
+      </div>
+      <div class="muestra-braille" aria-hidden="true">
+        <span>⠃</span><span>⠗</span><span>⠁</span><span>⠊</span><span>⠇</span><span>⠇</span><span>⠑</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="seccion presentacion" aria-labelledby="titulo-presentacion">
+      <div class="contenedor">
+        <div class="panel-presentacion">
+          <div>
+            <p class="sobretitulo">Conoce el recurso</p>
+            <h2 id="titulo-presentacion">Una consulta inicial, clara y organizada</h2>
+          </div>
+          <p>
+            Explora la representación en Braille de letras, números, signos y palabras de uso cotidiano.
+            Utiliza el buscador o selecciona una categoría para encontrar rápidamente el contenido que necesitas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion catalogo" aria-labelledby="titulo-catalogo">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div>
+            <p class="sobretitulo">Banco de contenidos</p>
+            <h2 id="titulo-catalogo">Explora el sistema Braille</h2>
+          </div>
+          <p id="contador-resultados" class="contador" role="status" aria-live="polite">Cargando contenidos…</p>
+        </div>
+
+        <div class="herramientas">
+          <div class="grupo-busqueda">
+            <label for="buscador">Buscar una letra, número, signo o palabra</label>
+            <div class="campo-busqueda">
+              <span class="icono-busqueda" aria-hidden="true">⌕</span>
+              <input
+                type="search"
+                id="buscador"
+                name="buscador"
+                placeholder="Ejemplo: A, 5, coma o casa"
+                autocomplete="off"
+                aria-describedby="ayuda-busqueda"
+              >
+            </div>
+            <p id="ayuda-busqueda" class="ayuda">La búsqueda también reconoce palabras escritas sin tilde.</p>
+          </div>
+
+          <div class="grupo-filtros">
+            <p id="titulo-filtros">Filtrar por categoría</p>
+            <div class="filtros" role="group" aria-labelledby="titulo-filtros">
+              <button class="filtro activo" type="button" data-categoria="todas" aria-pressed="true">Todas</button>
+              <button class="filtro" type="button" data-categoria="alfabeto" aria-pressed="false">Alfabeto</button>
+              <button class="filtro" type="button" data-categoria="numeros" aria-pressed="false">Números</button>
+              <button class="filtro" type="button" data-categoria="signos-basicos" aria-pressed="false">Signos básicos</button>
+              <button class="filtro" type="button" data-categoria="vocales-acentuadas" aria-pressed="false">Vocales acentuadas</button>
+              <button class="filtro" type="button" data-categoria="palabras-basicas" aria-pressed="false">Palabras básicas</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="lista-tarjetas" class="lista-tarjetas" aria-busy="true"></div>
+
+        <div id="estado-vacio" class="estado-vacio" hidden>
+          <p class="estado-vacio-simbolo" aria-hidden="true">⠿</p>
+          <h3>No encontramos resultados</h3>
+          <p>Prueba con otro término o selecciona una categoría diferente.</p>
+          <button id="limpiar-filtros" class="boton boton-primario" type="button">Ver todos los contenidos</button>
+        </div>
+
+        <div id="mensaje-error" class="mensaje-error" role="alert" hidden>
+          <h3>No se pudieron cargar los contenidos</h3>
+          <p>Abre el sitio desde un servidor web local o desde GitHub Pages e inténtalo nuevamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion-aviso" aria-labelledby="titulo-aviso">
+      <div class="contenedor">
+        <aside class="aviso-pedagogico">
+          <div class="aviso-icono" aria-hidden="true">i</div>
+          <div>
+            <h2 id="titulo-aviso">Advertencia pedagógica</h2>
+            <p>Este recurso facilita la consulta visual del sistema Braille. No reemplaza el aprendizaje táctil en material impreso en relieve.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <p>Desarrollado por Gabriel Bermúdez con apoyo institucional del CREBE "Señor de los Milagros" - Ucayali. Plataforma educativa sin fines de lucro.</p>
+    </div>
+  </footer>
+</body>
+</html>
