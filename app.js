@@ -225,7 +225,9 @@ if (elementos.limpiarFiltros) {
 }
 
 if (elementos.mostrarAleatorio) {
-  elementos.mostrarAleatorio.addEventListener("click", mostrarMasSignos);
+  elementos.mostrarAleatorio.addEventListener("click", () => {
+    renderizar();
+  });
 }
 
 cargarContenidos();
