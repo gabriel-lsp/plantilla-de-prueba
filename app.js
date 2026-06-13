@@ -1,6 +1,7 @@
 "use strict";
 
-const MAXIMO_TARJETAS_VISIBLES = 6;
+const CANTIDAD_INICIAL_VISIBLE = 6;
+const INCREMENTO_VISIBLE = 6;
 
 const elementos = {
   buscador: document.querySelector("#buscador"),
@@ -23,6 +24,9 @@ const nombresCategorias = {
 
 let contenidos = [];
 let categoriaActiva = "todas";
+let cantidadVisible = CANTIDAD_INICIAL_VISIBLE;
+let claveResultadosActual = "";
+let resultadosAleatorios = [];
 
 function normalizarTexto(texto) {
   return texto
@@ -43,8 +47,9 @@ function mezclarAleatoriamente(lista) {
   return copia;
 }
 
-function limitarResultados(lista) {
-  return mezclarAleatoriamente(lista).slice(0, MAXIMO_TARJETAS_VISIBLES);
+function obtenerClaveResultados() {
+  const consulta = normalizarTexto(elementos.buscador.value);
+  return `${categoriaActiva}|${consulta}`;
 }
 
 function crearTarjeta(item) {
@@ -101,38 +106,38 @@ function obtenerResultados() {
 }
 
 function actualizarContador(cantidadMostrada, cantidadTotalFiltrada) {
-  const total = contenidos.length;
-  const busquedaVacia = elementos.buscador.value.trim() === "";
-  const vistaGeneral = categoriaActiva === "todas" && busquedaVacia;
-
-  if (vistaGeneral) {
-    elementos.contador.textContent =
-      total <= MAXIMO_TARJETAS_VISIBLES
-        ? `${total} contenidos disponibles`
-        : `Mostrando ${cantidadMostrada} signos aleatorios de ${total} contenidos disponibles`;
-    return;
-  }
-
   if (cantidadTotalFiltrada === 0) {
     elementos.contador.textContent = "0 resultados encontrados";
     return;
   }
 
-  if (cantidadTotalFiltrada <= MAXIMO_TARJETAS_VISIBLES) {
+  if (cantidadMostrada >= cantidadTotalFiltrada) {
     elementos.contador.textContent =
       cantidadTotalFiltrada === 1
-        ? "1 resultado encontrado"
-        : `${cantidadTotalFiltrada} resultados encontrados`;
+        ? "Mostrando 1 resultado"
+        : `Mostrando ${cantidadTotalFiltrada} resultados`;
     return;
   }
 
   elementos.contador.textContent =
-    `Mostrando ${cantidadMostrada} signos aleatorios de ${cantidadTotalFiltrada} resultados encontrados`;
+    `Mostrando ${cantidadMostrada} de ${cantidadTotalFiltrada} resultados`;
 }
 
 function renderizar() {
   const resultados = obtenerResultados();
-  const resultadosVisibles = limitarResultados(resultados);
+  const claveResultados = obtenerClaveResultados();
+
+  if (claveResultados !== claveResultadosActual) {
+    claveResultadosActual = claveResultados;
+    cantidadVisible = CANTIDAD_INICIAL_VISIBLE;
+    resultadosAleatorios = mezclarAleatoriamente(resultados);
+  }
+
+  if (resultadosAleatorios.length === 0 && resultados.length > 0) {
+    resultadosAleatorios = mezclarAleatoriamente(resultados);
+  }
+
+  const resultadosVisibles = resultadosAleatorios.slice(0, cantidadVisible);
   const fragmento = document.createDocumentFragment();
 
   resultadosVisibles.forEach((item) => {
@@ -140,25 +145,21 @@ function renderizar() {
   });
 
   elementos.lista.replaceChildren(fragmento);
+
   elementos.lista.hidden = resultados.length === 0;
   elementos.estadoVacio.hidden = resultados.length !== 0;
 
   if (elementos.mostrarAleatorio) {
-    elementos.mostrarAleatorio.hidden = resultados.length <= MAXIMO_TARJETAS_VISIBLES;
+    elementos.mostrarAleatorio.hidden =
+      resultados.length === 0 || cantidadVisible >= resultados.length;
   }
 
   actualizarContador(resultadosVisibles.length, resultados.length);
 }
 
 function mostrarMasSignos() {
+  cantidadVisible += INCREMENTO_VISIBLE;
   renderizar();
-
-  if (elementos.lista) {
-    elementos.lista.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }
 }
 
 function seleccionarCategoria(botonSeleccionado) {
@@ -225,9 +226,7 @@ if (elementos.limpiarFiltros) {
 }
 
 if (elementos.mostrarAleatorio) {
-  elementos.mostrarAleatorio.addEventListener("click", () => {
-    renderizar();
-  });
+  elementos.mostrarAleatorio.addEventListener("click", mostrarMasSignos);
 }
 
 cargarContenidos();
