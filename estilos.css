@@ -818,3 +818,56 @@ footer {
     transition: none !important;
   }
 }
+.contenedor-boton-mas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 34px 0 54px;
+}
+
+.boton-mas {
+  border: none;
+  border-radius: 12px;
+  background: #147c68;
+  color: #ffffff;
+  padding: 14px 24px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(20, 124, 104, 0.24);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.boton-mas:hover {
+  background: #0f6b5a;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(20, 124, 104, 0.28);
+}
+
+.boton-mas:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 16px rgba(20, 124, 104, 0.22);
+}
+
+.boton-mas:focus-visible {
+  outline: 3px solid rgba(20, 124, 104, 0.32);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .contenedor-boton-mas {
+    margin: 28px 0 44px;
+  }
+
+  .boton-mas {
+    width: 100%;
+    max-width: 260px;
+    padding: 14px 18px;
+  }
+}
