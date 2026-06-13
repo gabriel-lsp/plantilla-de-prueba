@@ -1,5 +1,7 @@
 "use strict";
 
+const MAXIMO_TARJETAS_VISIBLES = 6;
+
 const elementos = {
   buscador: document.querySelector("#buscador"),
   filtros: [...document.querySelectorAll(".filtro")],
@@ -27,6 +29,21 @@ function normalizarTexto(texto) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .trim();
+}
+
+function mezclarAleatoriamente(lista) {
+  const copia = [...lista];
+
+  for (let i = copia.length - 1; i > 0; i--) {
+    const indiceAleatorio = Math.floor(Math.random() * (i + 1));
+    [copia[i], copia[indiceAleatorio]] = [copia[indiceAleatorio], copia[i]];
+  }
+
+  return copia;
+}
+
+function limitarResultados(lista) {
+  return mezclarAleatoriamente(lista).slice(0, MAXIMO_TARJETAS_VISIBLES);
 }
 
 function crearTarjeta(item) {
@@ -82,28 +99,50 @@ function obtenerResultados() {
   });
 }
 
-function actualizarContador(cantidad) {
+function actualizarContador(cantidadMostrada, cantidadTotalFiltrada) {
   const total = contenidos.length;
+  const busquedaVacia = elementos.buscador.value.trim() === "";
+  const vistaGeneral = categoriaActiva === "todas" && busquedaVacia;
 
-  if (cantidad === total && categoriaActiva === "todas" && elementos.buscador.value.trim() === "") {
-    elementos.contador.textContent = `${total} contenidos disponibles`;
+  if (vistaGeneral) {
+    elementos.contador.textContent =
+      total <= MAXIMO_TARJETAS_VISIBLES
+        ? `${total} contenidos disponibles`
+        : `Mostrando ${cantidadMostrada} de ${total} contenidos disponibles`;
     return;
   }
 
-  elementos.contador.textContent = cantidad === 1
-    ? "1 resultado encontrado"
-    : `${cantidad} resultados encontrados`;
+  if (cantidadTotalFiltrada === 0) {
+    elementos.contador.textContent = "0 resultados encontrados";
+    return;
+  }
+
+  if (cantidadTotalFiltrada <= MAXIMO_TARJETAS_VISIBLES) {
+    elementos.contador.textContent =
+      cantidadTotalFiltrada === 1
+        ? "1 resultado encontrado"
+        : `${cantidadTotalFiltrada} resultados encontrados`;
+    return;
+  }
+
+  elementos.contador.textContent =
+    `Mostrando ${cantidadMostrada} de ${cantidadTotalFiltrada} resultados encontrados`;
 }
 
 function renderizar() {
   const resultados = obtenerResultados();
+  const resultadosVisibles = limitarResultados(resultados);
   const fragmento = document.createDocumentFragment();
 
-  resultados.forEach((item) => fragmento.appendChild(crearTarjeta(item)));
+  resultadosVisibles.forEach((item) => {
+    fragmento.appendChild(crearTarjeta(item));
+  });
+
   elementos.lista.replaceChildren(fragmento);
   elementos.lista.hidden = resultados.length === 0;
   elementos.estadoVacio.hidden = resultados.length !== 0;
-  actualizarContador(resultados.length);
+
+  actualizarContador(resultadosVisibles.length, resultados.length);
 }
 
 function seleccionarCategoria(botonSeleccionado) {
@@ -152,9 +191,11 @@ async function cargarContenidos() {
 }
 
 elementos.buscador.addEventListener("input", renderizar);
+
 elementos.filtros.forEach((boton) => {
   boton.addEventListener("click", () => seleccionarCategoria(boton));
 });
+
 elementos.limpiarFiltros.addEventListener("click", restablecerVista);
 
 cargarContenidos();
