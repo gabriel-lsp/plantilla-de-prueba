@@ -1,14 +1,14 @@
 # Banco Digital del Sistema Braille
 
-Banco Digital del Sistema Braille es una plataforma web educativa para la consulta visual, el reconocimiento inicial y la práctica básica del sistema Braille.
+Banco Digital del Sistema Braille es una plataforma web educativa que desarrollé como proyecto personal para apoyar la consulta visual, el reconocimiento inicial y la práctica básica del sistema Braille.
 
-El proyecto está orientado a docentes, familias, estudiantes, profesionales de apoyo y comunidad educativa interesada en contar con un recurso accesible, sencillo y funcional para acercarse al sistema Braille desde un entorno digital.
+El recurso está pensado para docentes, familias, estudiantes, profesionales de apoyo y personas interesadas en acercarse al sistema Braille desde un entorno digital sencillo, accesible y funcional.
 
 ## Finalidad del proyecto
 
-La finalidad principal del banco digital es organizar contenidos básicos del sistema Braille en una plataforma de consulta clara y accesible. El recurso permite reconocer letras, vocales acentuadas, números, signos básicos y palabras de uso cotidiano mediante una presentación visual e interactiva.
+La finalidad principal es organizar contenidos básicos del sistema Braille en una plataforma de consulta clara y accesible. El recurso permite reconocer letras, vocales acentuadas, números, signos básicos y palabras de uso cotidiano mediante una presentación visual e interactiva.
 
-Este banco digital tiene una finalidad educativa, accesible y no comercial. No reemplaza el aprendizaje táctil del Braille en material impreso en relieve, ni la enseñanza especializada que pueda requerir una persona con discapacidad visual. Debe entenderse como un apoyo inicial, visual y pedagógico.
+Este banco digital tiene finalidad educativa, accesible y no comercial. No reemplaza el aprendizaje táctil del Braille en material impreso en relieve, ni la enseñanza especializada que pueda requerir una persona con discapacidad visual. Debe entenderse como un apoyo inicial, visual y pedagógico.
 
 ## Características
 
@@ -37,12 +37,12 @@ banco-digital-braille/
     ├── alcance-pedagogico.md
     ├── fuentes-y-creditos.md
     ├── uso-permitido.md
-    ├── respaldo-institucional.md
+    ├── autoria-y-contexto.md
     ├── estructura-del-proyecto.md
     └── bitacora-de-cambios.md
 ```
 
-La carpeta `docs` reúne documentos de respaldo pedagógico, autoral, institucional y organizativo del proyecto.
+La carpeta `docs` permite conservar información de respaldo pedagógico, autoral, técnico y organizativo del proyecto.
 
 ## Archivos principales
 
@@ -62,19 +62,19 @@ No reemplaza el aprendizaje táctil en material impreso en relieve, la enseñanz
 
 ## Autoría y desarrollo
 
-Proyecto desarrollado y organizado por Gabriel Berrospi como recurso educativo digital orientado a la accesibilidad, la inclusión educativa y la atención a la diversidad.
+Proyecto desarrollado y organizado por Gabriel Berrospi como recurso educativo digital personal orientado a la accesibilidad, la inclusión educativa y la atención a la diversidad.
 
-El recurso puede vincularse al apoyo institucional del CREBE "Señor de los Milagros" - Ucayali cuando su uso sea coordinado dentro de acciones educativas, formativas o de orientación a la comunidad.
+Cuando el recurso sea utilizado dentro de acciones educativas del CREBE "Señor de los Milagros" - Ucayali u otra institución, dicha referencia debe entenderse como contexto de uso o coordinación, no como transferencia de autoría ni titularidad del proyecto digital.
 
 ## Uso permitido
 
-El proyecto puede ser consultado y utilizado con fines educativos, pedagógicos, familiares, institucionales y de sensibilización.
+El proyecto puede ser consultado y utilizado con fines educativos, pedagógicos, familiares y de sensibilización.
 
 Toda reutilización debe conservar la referencia al proyecto, al autor responsable y a las fuentes o materiales externos que puedan incorporarse.
 
 ## Licencia
 
-El código del repositorio se rige por el archivo `LICENSE`. Esta licencia no otorga automáticamente derechos sobre logos institucionales, imágenes, documentos externos o recursos elaborados por terceros.
+El código del repositorio se rige por el archivo `LICENSE`. Esta licencia no otorga automáticamente derechos sobre logos, imágenes, documentos externos o recursos elaborados por terceros.
 
 ## Ejecutar en el equipo
 
@@ -93,12 +93,12 @@ También puede utilizarse la extensión Live Server de Visual Studio Code.
 ## Publicar en GitHub Pages
 
 1. Sube todos los archivos a la rama principal del repositorio.
-2. En GitHub, abre **Settings > Pages**.
-3. En **Build and deployment**, selecciona **Deploy from a branch**.
+2. En GitHub, abre `Settings > Pages`.
+3. En `Build and deployment`, selecciona `Deploy from a branch`.
 4. Elige la rama principal y la carpeta raíz `/`.
 5. Guarda la configuración y espera a que GitHub publique la dirección del sitio.
 
-Antes de publicar, reemplaza el enlace temporal `#` del botón **Volver al inicio CREBE** por la dirección institucional definitiva.
+Antes de publicar, reemplaza los enlaces temporales por las direcciones definitivas del proyecto personal o del portal principal donde se integren los recursos.
 
 ## Estado del proyecto
 
@@ -109,5 +109,5 @@ El proyecto puede seguir ampliándose con actividades interactivas, fichas desca
 ## Créditos
 
 Banco Digital del Sistema Braille.  
-Desarrollado por Gabriel Berrospi con apoyo institucional del CREBE "Señor de los Milagros" - Ucayali.  
-Plataforma educativa sin fines de lucro.
+Proyecto desarrollado y organizado por Gabriel Berrospi.  
+Plataforma educativa personal sin fines de lucro.
