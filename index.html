@@ -5,197 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Repositorio Accesible del CREBE Señor de los Milagros - Ucayali: materiales disponibles, equipos tecnológicos y materiales elaborados para la inclusión educativa.">
   <title>Repositorio Accesible | CREBE Ucayali</title>
-  <link rel="stylesheet" href="estilos.css?v=1">
+  <link rel="stylesheet" href="estilos.css?v=3">
   <style>
-    .cabecera {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      background: linear-gradient(135deg, rgba(11,53,80,.98) 0%, rgba(12,78,84,.95) 48%, rgba(31,132,122,.9) 100%);
-    }
-
-    .patron-portada {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden;
-      pointer-events: none;
-      opacity: .46;
-    }
-
-    .patron-portada svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .patron-portada::before {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      content: "";
-      background:
-        linear-gradient(90deg, rgba(6,35,54,.96) 0%, rgba(6,48,61,.78) 36%, rgba(10,82,82,.34) 68%, rgba(12,104,96,.16) 100%),
-        radial-gradient(circle at 79% 39%, rgba(255,255,255,.18) 0%, rgba(255,255,255,.08) 30%, transparent 58%);
-    }
-
-    .patron-portada::after {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      content: "";
-      background: linear-gradient(180deg, rgba(255,255,255,.04) 0%, transparent 42%, rgba(0,0,0,.08) 100%);
-    }
-
-    .cabecera .navegacion,
-    .cabecera .portada {
-      position: relative;
-      z-index: 1;
-    }
+    .cabecera{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(135deg,rgba(11,53,80,.98) 0%,rgba(12,78,84,.95) 48%,rgba(31,132,122,.9) 100%)}
+    .patron-portada{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:url("patron-shipibo.png");background-repeat:repeat;background-size:560px auto;background-position:center top;opacity:.30;filter:saturate(1.15) contrast(1.08)}
+    .patron-portada::before{position:absolute;inset:0;content:"";background:linear-gradient(90deg,rgba(6,35,54,.74) 0%,rgba(6,48,61,.50) 38%,rgba(10,82,82,.28) 68%,rgba(12,104,96,.14) 100%)}
+    .patron-portada::after{position:absolute;inset:0;content:"";background:linear-gradient(180deg,rgba(255,255,255,.03) 0%,transparent 42%,rgba(0,0,0,.07) 100%)}
+    .cabecera .navegacion,.cabecera .portada{position:relative;z-index:1}
   </style>
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
   <header class="cabecera" id="inicio">
-    <div class="patron-portada" aria-hidden="true">
-      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <g id="motivo-shipibo" fill="none" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M0 34 H30 V6 H58 V0" />
-            <path d="M220 34 H190 V6 H162 V0" />
-            <path d="M0 186 H30 V214 H58 V220" />
-            <path d="M220 186 H190 V214 H162 V220" />
-
-            <path d="M0 74 H26 V54 H50 V34 H74" />
-            <path d="M220 74 H194 V54 H170 V34 H146" />
-            <path d="M0 146 H26 V166 H50 V186 H74" />
-            <path d="M220 146 H194 V166 H170 V186 H146" />
-
-            <path d="M46 110 H70" />
-            <path d="M150 110 H174" />
-            <path d="M70 110 C70 78 108 78 108 110" />
-            <path d="M70 110 C70 142 108 142 108 110" />
-            <path d="M112 110 C112 78 150 78 150 110" />
-            <path d="M112 110 C112 142 150 142 150 110" />
-
-            <path d="M74 62 H94 V42 H110 V62 H126 V42 H146 V62" />
-            <path d="M74 158 H94 V178 H110 V158 H126 V178 H146 V158" />
-
-            <path d="M110 0 V28" />
-            <path d="M110 192 V220" />
-            <path d="M90 28 H130" />
-            <path d="M90 192 H130" />
-            <path d="M90 28 V50 H72 V72" />
-            <path d="M130 28 V50 H148 V72" />
-            <path d="M90 192 V170 H72 V148" />
-            <path d="M130 192 V170 H148 V148" />
-
-            <path d="M40 86 H58 V68 H76" />
-            <path d="M40 134 H58 V152 H76" />
-            <path d="M180 86 H162 V68 H144" />
-            <path d="M180 134 H162 V152 H144" />
-
-            <path d="M24 30 H38" />
-            <path d="M31 23 V37" />
-            <path d="M182 30 H196" />
-            <path d="M189 23 V37" />
-            <path d="M24 190 H38" />
-            <path d="M31 183 V197" />
-            <path d="M182 190 H196" />
-            <path d="M189 183 V197" />
-
-            <path d="M32 110 H0" />
-            <path d="M188 110 H220" />
-          </g>
-
-          <g id="motivo-shipibo-alterno" fill="none" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M0 42 H24 V18 H54 V0" />
-            <path d="M220 42 H196 V18 H166 V0" />
-            <path d="M0 178 H24 V202 H54 V220" />
-            <path d="M220 178 H196 V202 H166 V220" />
-
-            <path d="M46 110 H66" />
-            <path d="M154 110 H174" />
-            <path d="M66 110 C66 84 94 84 94 110" />
-            <path d="M66 110 C66 136 94 136 94 110" />
-            <path d="M126 110 C126 84 154 84 154 110" />
-            <path d="M126 110 C126 136 154 136 154 110" />
-            <path d="M96 110 H124" />
-
-            <path d="M84 52 H100 V34 H120 V52 H136" />
-            <path d="M84 168 H100 V186 H120 V168 H136" />
-            <path d="M92 74 H128" />
-            <path d="M92 146 H128" />
-            <path d="M110 0 V32" />
-            <path d="M110 188 V220" />
-            <path d="M98 74 V94 H122 V74" />
-            <path d="M98 146 V126 H122 V146" />
-
-            <path d="M28 74 H52 V52 H72" />
-            <path d="M28 146 H52 V168 H72" />
-            <path d="M192 74 H168 V52 H148" />
-            <path d="M192 146 H168 V168 H148" />
-
-            <path d="M26 32 H40" />
-            <path d="M33 25 V39" />
-            <path d="M180 32 H194" />
-            <path d="M187 25 V39" />
-            <path d="M26 188 H40" />
-            <path d="M33 181 V195" />
-            <path d="M180 188 H194" />
-            <path d="M187 181 V195" />
-
-            <path d="M0 110 H28" />
-            <path d="M192 110 H220" />
-          </g>
-
-          <pattern id="patron-celeste" width="440" height="440" patternUnits="userSpaceOnUse">
-            <rect width="440" height="440" fill="transparent" />
-            <use href="#motivo-shipibo" stroke="#2bb7dc" x="0" y="0" />
-            <use href="#motivo-shipibo-alterno" stroke="#2bb7dc" x="220" y="0" />
-            <use href="#motivo-shipibo-alterno" stroke="#2bb7dc" x="0" y="220" />
-            <use href="#motivo-shipibo" stroke="#2bb7dc" x="220" y="220" />
-          </pattern>
-
-          <pattern id="patron-naranja" width="440" height="440" patternUnits="userSpaceOnUse">
-            <rect width="440" height="440" fill="transparent" />
-            <use href="#motivo-shipibo" stroke="#e47c19" x="0" y="0" />
-            <use href="#motivo-shipibo-alterno" stroke="#e47c19" x="220" y="0" />
-            <use href="#motivo-shipibo-alterno" stroke="#e47c19" x="0" y="220" />
-            <use href="#motivo-shipibo" stroke="#e47c19" x="220" y="220" />
-          </pattern>
-
-          <pattern id="patron-fucsia" width="440" height="440" patternUnits="userSpaceOnUse">
-            <rect width="440" height="440" fill="transparent" />
-            <use href="#motivo-shipibo" stroke="#c32788" x="0" y="0" />
-            <use href="#motivo-shipibo-alterno" stroke="#c32788" x="220" y="0" />
-            <use href="#motivo-shipibo-alterno" stroke="#c32788" x="0" y="220" />
-            <use href="#motivo-shipibo" stroke="#c32788" x="220" y="220" />
-          </pattern>
-
-          <pattern id="patron-amarillo" width="440" height="440" patternUnits="userSpaceOnUse">
-            <rect width="440" height="440" fill="transparent" />
-            <use href="#motivo-shipibo" stroke="#ffd21c" x="0" y="0" />
-            <use href="#motivo-shipibo-alterno" stroke="#ffd21c" x="220" y="0" />
-            <use href="#motivo-shipibo-alterno" stroke="#ffd21c" x="0" y="220" />
-            <use href="#motivo-shipibo" stroke="#ffd21c" x="220" y="220" />
-          </pattern>
-        </defs>
-
-        <g opacity=".92">
-          <rect x="0" y="0" width="800" height="450" fill="url(#patron-celeste)" />
-          <rect x="800" y="0" width="800" height="450" fill="url(#patron-naranja)" />
-          <rect x="0" y="450" width="800" height="450" fill="url(#patron-fucsia)" />
-          <rect x="800" y="450" width="800" height="450" fill="url(#patron-amarillo)" />
-        </g>
-      </svg>
-    </div>
-
+    <div class="patron-portada" aria-hidden="true"></div>
     <nav class="navegacion" aria-label="Navegación principal">
-      <a class="marca" href="index.html" aria-label="Ir al Repositorio Accesible">
-        <span class="marca-icono" aria-hidden="true">RA</span>
-        <span>Repositorio Accesible</span>
-      </a>
+      <a class="marca" href="index.html" aria-label="Ir al Repositorio Accesible"><span class="marca-icono" aria-hidden="true">RA</span><span>Repositorio Accesible</span></a>
       <div class="enlaces-superiores">
         <a class="enlace-cabecera" href="index.html">Inicio RA</a>
         <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/">Accesos complementarios</a>
@@ -220,175 +44,23 @@
       <div class="panel-encabezado">
         <p class="seccion-etiqueta">Recursos de apoyo</p>
         <h2 id="titulo-recursos">Materiales, equipos y producciones accesibles</h2>
-        <p class="descripcion-panel">Esta página presenta de forma ordenada los recursos disponibles y los materiales elaborados para facilitar su consulta, uso pedagógico y actualización institucional.
-        </p>
+        <p class="descripcion-panel">Esta página presenta de forma ordenada los recursos disponibles y los materiales elaborados para facilitar su consulta, uso pedagógico y actualización institucional.</p>
       </div>
       <div class="grid-recursos">
-        <article class="tarjeta-recurso">
-          <span class="numero-recurso">MD</span>
-          <h3>Materiales disponibles</h3>
-          <p>Recursos físicos o impresos que se encuentran disponibles para orientación, préstamo, consulta o apoyo pedagógico.</p>
-          <ul class="lista-ejemplos">
-            <li class="item-recurso" tabindex="0">Textos en braille
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=Textos+en+braille" alt="Imagen referencial de textos en braille">
-                <div class="detalle-texto">
-                  <strong>Textos en braille</strong>
-                  <span>Material de lectura accesible para orientación, consulta y apoyo a estudiantes con discapacidad visual.</span>
-                </div>
-              </div>
-            </li>
-            <li class="item-recurso" tabindex="0">Láminas adaptadas
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=L%C3%A1minas+adaptadas" alt="Imagen referencial de láminas adaptadas">
-                <div class="detalle-texto"><strong>Láminas adaptadas</strong>
-                  <span>Material visual o impreso adaptado para apoyar la comprensión de contenidos, rutinas o actividades educativas.</span>
-                </div>
-              </div>
-            </li>
-            <li class="item-recurso" tabindex="0">Tarjetas de comunicación
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=Tarjetas+de+comunicaci%C3%B3n" alt="Imagen referencial de tarjetas de comunicación">
-                <div class="detalle-texto">
-                  <strong>Tarjetas de comunicación</strong>
-                  <span>Apoyos visuales para facilitar la expresión, elección, anticipación y participación de estudiantes con necesidades comunicativas.</span>
-                </div>
-              </div>
-            </li>
-            <li class="item-recurso" tabindex="0">Material manipulativo
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=Material+manipulativo" alt="Imagen referencial de material manipulativo">
-                <div class="detalle-texto">
-                  <strong>Material manipulativo</strong>
-                  <span>Recursos concretos para favorecer la exploración, clasificación, asociación y aprendizaje mediante experiencias prácticas.</span>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </article>
-        <article class="tarjeta-recurso">
-          <span class="numero-recurso">ET</span>
-          <h3>Equipos tecnológicos</h3>
-          <p>Equipos y herramientas que apoyan la accesibilidad, la elaboración de materiales y el trabajo institucional.</p>
-          <ul class="lista-ejemplos">
-            <li class="item-recurso" tabindex="0">Máquina Perkins
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=M%C3%A1quina+Perkins" alt="Imagen referencial de máquina Perkins">
-                <div class="detalle-texto">
-                  <strong>Máquina Perkins</strong>
-                  <span>Equipo utilizado para la escritura en braille y la producción de materiales accesibles.</span>
-                </div>
-              </div>
-            </li>
-            <li class="item-recurso" tabindex="0">Impresora o equipo de apoyo
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=Equipo+de+apoyo" alt="Imagen referencial de equipo de apoyo">
-                <div class="detalle-texto">
-                  <strong>Impresora o equipo de apoyo</strong>
-                  <span>Herramienta tecnológica para elaborar, adaptar o reproducir materiales de uso pedagógico e institucional.</span>
-                </div>
-              </div>
-            </li>
-            <li class="item-recurso" tabindex="0">Dispositivos de acceso
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=Dispositivos+de+acceso" alt="Imagen referencial de dispositivos de acceso">
-                <div class="detalle-texto">
-                  <strong>Dispositivos de acceso</strong>
-                  <span>Apoyos tecnológicos que facilitan la participación, comunicación o interacción con materiales digitales y educativos.</span>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </article>
-        <article class="tarjeta-recurso">
-          <span class="numero-recurso">ME</span>
-          <h3>Materiales elaborados</h3>
-          <p>Producciones realizadas por el equipo para responder a necesidades educativas, comunicativas o de accesibilidad.
-          </p>
-          <ul class="lista-ejemplos">
-            <li class="item-recurso" tabindex="0">Silabario
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=Silabario" alt="Imagen referencial de silabario">
-                <div class="detalle-texto">
-                  <strong>Silabario</strong>
-                  <span>Material elaborado para apoyar el reconocimiento de sílabas, conciencia fonológica y procesos iniciales de lectura.</span>
-                </div>
-              </div>
-            </li>
-            <li class="item-recurso" tabindex="0">Rutinas visuales
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=Rutinas+visuales" alt="Imagen referencial de rutinas visuales">
-                <div class="detalle-texto">
-                  <strong>Rutinas visuales</strong>
-                  <span>Secuencias de apoyo para anticipar actividades, organizar tiempos y favorecer mayor comprensión de las tareas diarias.</span>
-                </div>
-              </div>
-            </li>
-            <li class="item-recurso" tabindex="0">Fichas adaptadas
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=Fichas+adaptadas" alt="Imagen referencial de fichas adaptadas">
-                <div class="detalle-texto">
-                  <strong>Fichas adaptadas</strong>
-                  <span>Materiales pedagógicos ajustados en estructura, lenguaje, contraste o apoyo visual según las necesidades educativas.</span>
-                </div>
-              </div>
-            </li>
-            <li class="item-recurso" tabindex="0">Materiales de sensibilización
-              <div class="recuadro-detalle" role="tooltip">
-                <img src="https://placehold.co/600x360/e5f3ef/17324d?text=Sensibilizaci%C3%B3n" alt="Imagen referencial de materiales de sensibilización">
-                <div class="detalle-texto">
-                  <strong>Materiales de sensibilización</strong>
-                  <span>Recursos elaborados para promover la comprensión, participación y valoración de la inclusión educativa.</span>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </article>
+        <article class="tarjeta-recurso"><span class="numero-recurso">MD</span><h3>Materiales disponibles</h3><p>Recursos físicos o impresos que se encuentran disponibles para orientación, préstamo, consulta o apoyo pedagógico.</p></article>
+        <article class="tarjeta-recurso"><span class="numero-recurso">ET</span><h3>Equipos tecnológicos</h3><p>Equipos y herramientas que apoyan la accesibilidad, la elaboración de materiales y el trabajo institucional.</p></article>
+        <article class="tarjeta-recurso"><span class="numero-recurso">ME</span><h3>Materiales elaborados</h3><p>Producciones realizadas por el equipo para responder a necesidades educativas, comunicativas o de accesibilidad.</p></article>
       </div>
-      <div class="nota-inferior">
-        <strong>Nota:</strong> esta sección puede actualizarse conforme se incorporen nuevos recursos, equipos o materiales elaborados. El registro permite visibilizar el trabajo institucional y facilitar la organización de los apoyos disponibles.
-      </div>
+      <div class="nota-inferior"><strong>Nota:</strong> esta sección puede actualizarse conforme se incorporen nuevos recursos, equipos o materiales elaborados.</div>
     </section>
   </main>
   <footer>
     <div class="footer-contenido">
-      <div class="footer-bloque footer-identidad">
-        <img class="logo-footer" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
-        <div>
-          <h2>Repositorio Accesible</h2>
-          <p>Espacio específico de materiales, equipos y producciones accesibles del CREBE Ucayali.</p>
-        </div>
-      </div>
-
-      <div class="footer-bloque">
-        <h2>Módulos</h2>
-        <p>
-          <a href="https://gabriel-lsp.github.io/capacitaciones-crebe-ucayali/">Capacitaciones CREBE</a><br>
-          <a href="https://gabriel-lsp.github.io/banco-digital-accesible/">Banco Digital Accesible</a><br>
-          <a href="https://gabriel-lsp.github.io/materiales-educativos-accesibles/">Materiales Educativos Accesibles</a><br>
-          <a href="https://gabriel-lsp.github.io/juegos-interactivos-accesibles/">Juegos Interactivos Accesibles</a><br>
-          <a href="https://gabriel-lsp.github.io/noti-inclusivos/">Noti Inclusivo</a>
-        </p>
-      </div>
-
-      <div class="footer-bloque">
-        <h2>Contacto CREBE</h2>
-        <p>
-          CREBE "Señor de los Milagros" - Ucayali<br>
-          Correo: senordelosmilagroscrebe@gmail.com<br>
-          Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.<br>
-          Dirección: I.E. Santa Clara 64039<br>
-          Avenida Santa Clara mz d lt 20<br>
-          Coronel Portillo-Manantay<br>
-          <a href="https://www.facebook.com/CREBESM" target="_blank" rel="noopener noreferrer">Facebook</a><br>
-          <a href="https://www.tiktok.com/@crebe.sm.ucayali?_r=1&_t=ZS-97Qjebz1I0b" target="_blank" rel="noopener noreferrer">TikTok</a>
-        </p>
-      </div>
+      <div class="footer-bloque footer-identidad"><img class="logo-footer" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali"><div><h2>Repositorio Accesible</h2><p>Espacio específico de materiales, equipos y producciones accesibles del CREBE Ucayali.</p></div></div>
+      <div class="footer-bloque"><h2>Módulos</h2><p><a href="https://gabriel-lsp.github.io/capacitaciones-crebe-ucayali/">Capacitaciones CREBE</a><br><a href="https://gabriel-lsp.github.io/banco-digital-accesible/">Banco Digital Accesible</a><br><a href="https://gabriel-lsp.github.io/materiales-educativos-accesibles/">Materiales Educativos Accesibles</a><br><a href="https://gabriel-lsp.github.io/juegos-interactivos-accesibles/">Juegos Interactivos Accesibles</a><br><a href="https://gabriel-lsp.github.io/noti-inclusivos/">Noti Inclusivo</a></p></div>
+      <div class="footer-bloque"><h2>Contacto CREBE</h2><p>CREBE "Señor de los Milagros" - Ucayali<br>Correo: senordelosmilagroscrebe@gmail.com<br>Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.<br>Dirección: I.E. Santa Clara 64039<br>Avenida Santa Clara mz d lt 20<br>Coronel Portillo-Manantay<br><a href="https://www.facebook.com/CREBESM" target="_blank" rel="noopener noreferrer">Facebook</a><br><a href="https://www.tiktok.com/@crebe.sm.ucayali" target="_blank" rel="noopener noreferrer">TikTok</a></p></div>
     </div>
-
-    <div class="footer-final">
-      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
-    </div>
+    <div class="footer-final"><p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p></div>
   </footer>
 </body>
 </html>
