@@ -11,24 +11,19 @@
       position: relative;
       isolation: isolate;
       overflow: hidden;
-      background: linear-gradient(135deg, rgba(11,53,80,.97) 0%, rgba(15,79,87,.94) 48%, rgba(15,118,110,.9) 100%);
+      background: linear-gradient(135deg, rgba(11,53,80,.98) 0%, rgba(12,78,84,.95) 48%, rgba(31,132,122,.9) 100%);
     }
 
     .patron-portada {
       position: absolute;
-      inset: -18%;
+      inset: 0;
       z-index: 0;
       overflow: hidden;
       pointer-events: none;
-      opacity: .26;
-      mix-blend-mode: screen;
-      transform: rotate(-1deg) scale(1.06);
-      transform-origin: center;
+      opacity: .46;
     }
 
     .patron-portada svg {
-      position: relative;
-      z-index: 0;
       display: block;
       width: 100%;
       height: 100%;
@@ -40,8 +35,8 @@
       z-index: 1;
       content: "";
       background:
-        radial-gradient(circle at 78% 42%, rgba(255,255,255,.18) 0%, rgba(255,255,255,.08) 28%, transparent 54%),
-        linear-gradient(90deg, rgba(5,36,55,.78) 0%, rgba(9,65,74,.42) 46%, rgba(15,118,110,.16) 100%);
+        linear-gradient(90deg, rgba(6,35,54,.96) 0%, rgba(6,48,61,.78) 36%, rgba(10,82,82,.34) 68%, rgba(12,104,96,.16) 100%),
+        radial-gradient(circle at 79% 39%, rgba(255,255,255,.18) 0%, rgba(255,255,255,.08) 30%, transparent 58%);
     }
 
     .patron-portada::after {
@@ -49,7 +44,7 @@
       inset: 0;
       z-index: 2;
       content: "";
-      background: linear-gradient(180deg, rgba(255,255,255,.06) 0%, transparent 34%, rgba(0,0,0,.08) 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,.04) 0%, transparent 42%, rgba(0,0,0,.08) 100%);
     }
 
     .cabecera .navegacion,
@@ -65,72 +60,134 @@
     <div class="patron-portada" aria-hidden="true">
       <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <g id="trazo-shipibo" fill="none" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M 0 40 H 18 V 20 H 42 V 0" />
-            <path d="M 160 40 H 142 V 20 H 118 V 0" />
-            <path d="M 0 120 H 18 V 140 H 42 V 160" />
-            <path d="M 160 120 H 142 V 140 H 118 V 160" />
+          <g id="motivo-shipibo" fill="none" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M0 34 H30 V6 H58 V0" />
+            <path d="M220 34 H190 V6 H162 V0" />
+            <path d="M0 186 H30 V214 H58 V220" />
+            <path d="M220 186 H190 V214 H162 V220" />
 
-            <path d="M 22 80 H 45" />
-            <path d="M 115 80 H 138" />
-            <path d="M 45 80 C 45 62 61 62 61 80 C 61 98 77 98 77 80" />
-            <path d="M 83 80 C 83 62 99 62 99 80 C 99 98 115 98 115 80" />
+            <path d="M0 74 H26 V54 H50 V34 H74" />
+            <path d="M220 74 H194 V54 H170 V34 H146" />
+            <path d="M0 146 H26 V166 H50 V186 H74" />
+            <path d="M220 146 H194 V166 H170 V186 H146" />
 
-            <path d="M 50 48 H 66 V 32 H 80" />
-            <path d="M 110 48 H 94 V 32 H 80" />
-            <path d="M 50 112 H 66 V 128 H 80" />
-            <path d="M 110 112 H 94 V 128 H 80" />
+            <path d="M46 110 H70" />
+            <path d="M150 110 H174" />
+            <path d="M70 110 C70 78 108 78 108 110" />
+            <path d="M70 110 C70 142 108 142 108 110" />
+            <path d="M112 110 C112 78 150 78 150 110" />
+            <path d="M112 110 C112 142 150 142 150 110" />
 
-            <path d="M 80 0 V 24" />
-            <path d="M 80 136 V 160" />
-            <path d="M 68 24 H 92" />
-            <path d="M 68 136 H 92" />
-            <path d="M 64 24 V 44 H 52 V 56" />
-            <path d="M 96 24 V 44 H 108 V 56" />
-            <path d="M 64 136 V 116 H 52 V 104" />
-            <path d="M 96 136 V 116 H 108 V 104" />
+            <path d="M74 62 H94 V42 H110 V62 H126 V42 H146 V62" />
+            <path d="M74 158 H94 V178 H110 V158 H126 V178 H146 V158" />
 
-            <path d="M 24 58 H 36 V 46 H 48" />
-            <path d="M 24 102 H 36 V 114 H 48" />
-            <path d="M 136 58 H 124 V 46 H 112" />
-            <path d="M 136 102 H 124 V 114 H 112" />
+            <path d="M110 0 V28" />
+            <path d="M110 192 V220" />
+            <path d="M90 28 H130" />
+            <path d="M90 192 H130" />
+            <path d="M90 28 V50 H72 V72" />
+            <path d="M130 28 V50 H148 V72" />
+            <path d="M90 192 V170 H72 V148" />
+            <path d="M130 192 V170 H148 V148" />
 
-            <path d="M 22 22 H 34" />
-            <path d="M 28 16 V 28" />
-            <path d="M 126 22 H 138" />
-            <path d="M 132 16 V 28" />
-            <path d="M 22 138 H 34" />
-            <path d="M 28 132 V 144" />
-            <path d="M 126 138 H 138" />
-            <path d="M 132 132 V 144" />
+            <path d="M40 86 H58 V68 H76" />
+            <path d="M40 134 H58 V152 H76" />
+            <path d="M180 86 H162 V68 H144" />
+            <path d="M180 134 H162 V152 H144" />
 
-            <path d="M 0 80 H 12" />
-            <path d="M 148 80 H 160" />
-            <path d="M 80 68 V 92" />
+            <path d="M24 30 H38" />
+            <path d="M31 23 V37" />
+            <path d="M182 30 H196" />
+            <path d="M189 23 V37" />
+            <path d="M24 190 H38" />
+            <path d="M31 183 V197" />
+            <path d="M182 190 H196" />
+            <path d="M189 183 V197" />
+
+            <path d="M32 110 H0" />
+            <path d="M188 110 H220" />
           </g>
 
-          <pattern id="shipibo-celeste" width="160" height="160" patternUnits="userSpaceOnUse">
-            <rect width="160" height="160" fill="transparent" />
-            <use href="#trazo-shipibo" stroke="#49d5f5" />
+          <g id="motivo-shipibo-alterno" fill="none" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M0 42 H24 V18 H54 V0" />
+            <path d="M220 42 H196 V18 H166 V0" />
+            <path d="M0 178 H24 V202 H54 V220" />
+            <path d="M220 178 H196 V202 H166 V220" />
+
+            <path d="M46 110 H66" />
+            <path d="M154 110 H174" />
+            <path d="M66 110 C66 84 94 84 94 110" />
+            <path d="M66 110 C66 136 94 136 94 110" />
+            <path d="M126 110 C126 84 154 84 154 110" />
+            <path d="M126 110 C126 136 154 136 154 110" />
+            <path d="M96 110 H124" />
+
+            <path d="M84 52 H100 V34 H120 V52 H136" />
+            <path d="M84 168 H100 V186 H120 V168 H136" />
+            <path d="M92 74 H128" />
+            <path d="M92 146 H128" />
+            <path d="M110 0 V32" />
+            <path d="M110 188 V220" />
+            <path d="M98 74 V94 H122 V74" />
+            <path d="M98 146 V126 H122 V146" />
+
+            <path d="M28 74 H52 V52 H72" />
+            <path d="M28 146 H52 V168 H72" />
+            <path d="M192 74 H168 V52 H148" />
+            <path d="M192 146 H168 V168 H148" />
+
+            <path d="M26 32 H40" />
+            <path d="M33 25 V39" />
+            <path d="M180 32 H194" />
+            <path d="M187 25 V39" />
+            <path d="M26 188 H40" />
+            <path d="M33 181 V195" />
+            <path d="M180 188 H194" />
+            <path d="M187 181 V195" />
+
+            <path d="M0 110 H28" />
+            <path d="M192 110 H220" />
+          </g>
+
+          <pattern id="patron-celeste" width="440" height="440" patternUnits="userSpaceOnUse">
+            <rect width="440" height="440" fill="transparent" />
+            <use href="#motivo-shipibo" stroke="#2bb7dc" x="0" y="0" />
+            <use href="#motivo-shipibo-alterno" stroke="#2bb7dc" x="220" y="0" />
+            <use href="#motivo-shipibo-alterno" stroke="#2bb7dc" x="0" y="220" />
+            <use href="#motivo-shipibo" stroke="#2bb7dc" x="220" y="220" />
           </pattern>
-          <pattern id="shipibo-naranja" width="160" height="160" patternUnits="userSpaceOnUse">
-            <rect width="160" height="160" fill="transparent" />
-            <use href="#trazo-shipibo" stroke="#ff9d32" />
+
+          <pattern id="patron-naranja" width="440" height="440" patternUnits="userSpaceOnUse">
+            <rect width="440" height="440" fill="transparent" />
+            <use href="#motivo-shipibo" stroke="#e47c19" x="0" y="0" />
+            <use href="#motivo-shipibo-alterno" stroke="#e47c19" x="220" y="0" />
+            <use href="#motivo-shipibo-alterno" stroke="#e47c19" x="0" y="220" />
+            <use href="#motivo-shipibo" stroke="#e47c19" x="220" y="220" />
           </pattern>
-          <pattern id="shipibo-fucsia" width="160" height="160" patternUnits="userSpaceOnUse">
-            <rect width="160" height="160" fill="transparent" />
-            <use href="#trazo-shipibo" stroke="#f04da8" />
+
+          <pattern id="patron-fucsia" width="440" height="440" patternUnits="userSpaceOnUse">
+            <rect width="440" height="440" fill="transparent" />
+            <use href="#motivo-shipibo" stroke="#c32788" x="0" y="0" />
+            <use href="#motivo-shipibo-alterno" stroke="#c32788" x="220" y="0" />
+            <use href="#motivo-shipibo-alterno" stroke="#c32788" x="0" y="220" />
+            <use href="#motivo-shipibo" stroke="#c32788" x="220" y="220" />
           </pattern>
-          <pattern id="shipibo-amarillo" width="160" height="160" patternUnits="userSpaceOnUse">
-            <rect width="160" height="160" fill="transparent" />
-            <use href="#trazo-shipibo" stroke="#ffe24d" />
+
+          <pattern id="patron-amarillo" width="440" height="440" patternUnits="userSpaceOnUse">
+            <rect width="440" height="440" fill="transparent" />
+            <use href="#motivo-shipibo" stroke="#ffd21c" x="0" y="0" />
+            <use href="#motivo-shipibo-alterno" stroke="#ffd21c" x="220" y="0" />
+            <use href="#motivo-shipibo-alterno" stroke="#ffd21c" x="0" y="220" />
+            <use href="#motivo-shipibo" stroke="#ffd21c" x="220" y="220" />
           </pattern>
         </defs>
 
-        <rect x="0" y="0" width="800" height="450" fill="url(#shipibo-celeste)" />
-        <rect x="800" y="0" width="800" height="450" fill="url(#shipibo-naranja)" />
-        <rect x="0" y="450" width="800" height="450" fill="url(#shipibo-fucsia)" />
-        <rect x="800" y="450" width="800" height="450" fill="url(#shipibo-amarillo)" />
+        <g opacity=".92">
+          <rect x="0" y="0" width="800" height="450" fill="url(#patron-celeste)" />
+          <rect x="800" y="0" width="800" height="450" fill="url(#patron-naranja)" />
+          <rect x="0" y="450" width="800" height="450" fill="url(#patron-fucsia)" />
+          <rect x="800" y="450" width="800" height="450" fill="url(#patron-amarillo)" />
+        </g>
       </svg>
     </div>
 
